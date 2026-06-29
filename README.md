@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ნუტრიციოლოგი — Georgian Nutrition & Weight-Loss Calculator
+
+A production-quality, responsive, health-focused nutrition calculator website built with Next.js, React, TypeScript, and Tailwind CSS. The entire UI is in Georgian language.
+
+## Features
+
+- **BMI Analysis** — Calculates BMI with CDC categories, explains limitations
+- **Calorie Estimation** — Mifflin-St Jeor BMR → TDEE with activity multipliers
+- **Safe Weight-Loss Targets** — Conservative/moderate/maximum deficit levels with floor (1200 kcal) and cap (1000 kcal deficit)
+- **Macro Targets** — Protein (adjusted for BMI), fat, carbs, fiber
+- **Personalized Meal Plan** — Georgian-friendly food database, respects dietary preferences
+- **Health Safety Screening** — Blocks or warns for minors, pregnancy, eating disorders, kidney/liver disease, diabetes with medication, very high BMI
+- **Waist-to-Height Ratio** — Optional central adiposity screening
+- **Mobile-first responsive design** — Works on phones, tablets, and desktops
+
+## Safety Philosophy
+
+This app prioritizes safety over conversion:
+- Never recommends extreme calorie restriction, fasting, detox, or keto as universal solutions
+- Never diagnoses diseases or replaces medical consultation
+- Blocks weight-loss plans for minors (<18), pregnant/breastfeeding users, and users with eating disorder history
+- Warns and recommends specialists for diabetes with medication, kidney/liver disease, very high BMI
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **React 19** + **TypeScript**
+- **Tailwind CSS 4**
+- All calculations run client-side — no data is sent to any server
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+```
 
-## Learn More
+28 unit tests covering BMI, BMR, TDEE, calorie safety, macros, and all safety rules.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                    # Next.js pages
+│   ├── page.tsx            # Landing page
+│   ├── calculator/         # Multi-step calculator form
+│   ├── results/            # Calculation results
+│   ├── meal-plan/          # Generated meal plan
+│   ├── disclaimer/         # Medical disclaimer
+│   └── methodology/        # How the system calculates
+├── components/
+│   ├── forms/              # Step1, Step2, Step3, StepIndicator
+│   ├── results/            # ResultCards, MealPlanDisplay
+│   └── layout/             # Header, Footer
+├── lib/
+│   ├── health/
+│   │   ├── types.ts        # TypeScript types
+│   │   ├── healthConstants.ts # All constants (no magic numbers)
+│   │   ├── bmi.ts          # BMI calculation & categories
+│   │   ├── calories.ts     # BMR, TDEE, calorie targets
+│   │   ├── macros.ts       # Protein, fat, carb, fiber
+│   │   ├── safetyRules.ts  # Safety flag evaluation
+│   │   └── calculations.ts # Orchestrator
+│   ├── meal-plan/
+│   │   ├── foodDatabase.ts # Georgian food items with macros
+│   │   └── mealGenerator.ts # Meal plan generation
+│   └── context.tsx         # React context for state
+└── __tests__/
+    └── health.test.ts      # Unit tests
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Methodology Sources
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- CDC BMI categories and healthy weight guidance
+- CDC safe weight loss recommendations
+- NIDDK safe weight-loss program guidance
+- Mifflin-St Jeor equation (Am J Clin Nutr. 1990)
+- Dietary Reference Intakes for macronutrients and fiber
+- American Diabetes Association nutrition therapy guidance
+- NICE guidance on BMI and waist-to-height ratio
