@@ -59,7 +59,7 @@ export default function ResultsPage() {
       <ResultCards result={result} />
 
       {result.canGeneratePlan && result.macros && (
-        <div className="mt-6 sticky bottom-4">
+        <div className="mt-6 sticky bottom-0 bg-gray-50 py-4 -mx-4 px-4">
           <button
             type="button"
             onClick={handleGenerateMealPlan}

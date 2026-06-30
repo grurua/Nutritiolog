@@ -8,7 +8,6 @@ interface MealTemplate {
   vegSource: string[];
   fatSource?: string[];
   fruitSource?: string[];
-  dairySource?: string[];
   explanation: string;
 }
 
@@ -56,6 +55,42 @@ const MEAL_TEMPLATES: Record<string, MealTemplate[]> = {
   ],
 };
 
+const PORTION_LIMITS: Record<string, { min: number; max: number }> = {
+  egg: { min: 100, max: 120 },
+  chicken_breast: { min: 120, max: 200 },
+  turkey_breast: { min: 120, max: 200 },
+  lean_beef: { min: 100, max: 180 },
+  fish_white: { min: 120, max: 200 },
+  cottage_cheese: { min: 100, max: 200 },
+  matsoni: { min: 100, max: 200 },
+  greek_yogurt: { min: 100, max: 200 },
+  lentils: { min: 100, max: 200 },
+  beans: { min: 100, max: 200 },
+  buckwheat: { min: 100, max: 200 },
+  rice: { min: 100, max: 200 },
+  potato: { min: 100, max: 200 },
+  oats: { min: 100, max: 200 },
+  whole_wheat_bread: { min: 40, max: 80 },
+  cucumber: { min: 100, max: 200 },
+  tomato: { min: 100, max: 200 },
+  cabbage: { min: 100, max: 200 },
+  broccoli: { min: 100, max: 200 },
+  spinach: { min: 80, max: 150 },
+  greens: { min: 30, max: 50 },
+  bell_pepper: { min: 80, max: 150 },
+  apple: { min: 100, max: 180 },
+  berries: { min: 80, max: 150 },
+  orange: { min: 100, max: 180 },
+  banana: { min: 80, max: 130 },
+  walnuts: { min: 15, max: 30 },
+  almonds: { min: 15, max: 30 },
+  olive_oil: { min: 5, max: 15 },
+};
+
+function getPortionLimits(foodName: string): { min: number; max: number } {
+  return PORTION_LIMITS[foodName] ?? { min: 50, max: 200 };
+}
+
 function pickFood(candidates: string[], available: FoodItem[]): FoodItem | null {
   for (const name of candidates) {
     const found = available.find((f) => f.name === name);
@@ -68,13 +103,18 @@ function createIngredient(food: FoodItem, grams: number): MealIngredient {
   const factor = grams / 100;
   return {
     name: food.nameKa,
-    grams,
+    grams: Math.round(grams),
     calories: Math.round(food.per100g.calories * factor),
     protein: Math.round(food.per100g.protein * factor * 10) / 10,
     fat: Math.round(food.per100g.fat * factor * 10) / 10,
     carbs: Math.round(food.per100g.carbs * factor * 10) / 10,
     fiber: Math.round(food.per100g.fiber * factor * 10) / 10,
   };
+}
+
+function clampPortion(foodName: string, idealGrams: number): number {
+  const limits = getPortionLimits(foodName);
+  return Math.round(Math.min(limits.max, Math.max(limits.min, idealGrams)));
 }
 
 function buildMeal(
@@ -93,12 +133,13 @@ function buildMeal(
 
   const protein = pickFood(template.proteinSource, available);
   if (protein) {
-    let grams: number;
+    let idealGrams: number;
     if (protein.per100g.protein > 5) {
-      grams = Math.min(250, Math.max(50, Math.round((targetProtein * 0.7 / protein.per100g.protein) * 100)));
+      idealGrams = (targetProtein * 0.65 / protein.per100g.protein) * 100;
     } else {
-      grams = 150;
+      idealGrams = 150;
     }
+    const grams = clampPortion(protein.name, idealGrams);
     const ing = createIngredient(protein, grams);
     ingredients.push(ing);
     remainCal -= ing.calories;
@@ -107,10 +148,11 @@ function buildMeal(
     remainCarbs -= ing.carbs;
   }
 
-  if (template.carbSource.length > 0) {
+  if (template.carbSource.length > 0 && remainCarbs > 10) {
     const carb = pickFood(template.carbSource, available);
-    if (carb && remainCarbs > 10) {
-      const grams = Math.min(250, Math.max(50, Math.round((remainCarbs * 0.7 / Math.max(carb.per100g.carbs, 1)) * 100)));
+    if (carb) {
+      const idealGrams = (remainCarbs * 0.6 / Math.max(carb.per100g.carbs, 1)) * 100;
+      const grams = clampPortion(carb.name, idealGrams);
       const ing = createIngredient(carb, grams);
       ingredients.push(ing);
       remainCal -= ing.calories;
@@ -122,7 +164,7 @@ function buildMeal(
 
   const veg = pickFood(template.vegSource, available);
   if (veg) {
-    const grams = 150;
+    const grams = clampPortion(veg.name, 150);
     const ing = createIngredient(veg, grams);
     ingredients.push(ing);
     remainCal -= ing.calories;
@@ -133,7 +175,8 @@ function buildMeal(
   if (template.fatSource && remainFat > 3) {
     const fat = pickFood(template.fatSource, available);
     if (fat) {
-      const grams = Math.min(20, Math.max(5, Math.round((remainFat * 0.3 / Math.max(fat.per100g.fat, 1)) * 100)));
+      const idealGrams = (remainFat * 0.3 / Math.max(fat.per100g.fat, 1)) * 100;
+      const grams = clampPortion(fat.name, idealGrams);
       const ing = createIngredient(fat, grams);
       ingredients.push(ing);
       remainCal -= ing.calories;
@@ -143,7 +186,8 @@ function buildMeal(
   if (template.fruitSource && remainCarbs > 5) {
     const fruit = pickFood(template.fruitSource, available);
     if (fruit) {
-      const grams = Math.min(150, Math.max(50, Math.round((remainCarbs * 0.5 / Math.max(fruit.per100g.carbs, 1)) * 100)));
+      const idealGrams = (remainCarbs * 0.4 / Math.max(fruit.per100g.carbs, 1)) * 100;
+      const grams = clampPortion(fruit.name, idealGrams);
       const ing = createIngredient(fruit, grams);
       ingredients.push(ing);
     }
@@ -197,16 +241,13 @@ export function generateMealPlan(
     mealSlots.push('snack');
   }
 
-  const calPerMeal: Record<string, number> = {};
   const mainMealCount = mealSlots.filter((s) => s !== 'snack').length;
   const snackCount = mealSlots.filter((s) => s === 'snack').length;
 
   const snackCalories = snackCount > 0 ? Math.round(totalCalories * 0.12) : 0;
   const mainCalories = Math.round((totalCalories - snackCalories * snackCount) / mainMealCount);
 
-  for (const slot of mealSlots) {
-    calPerMeal[slot] = slot === 'snack' ? snackCalories : mainCalories;
-  }
+  const calPerSlot = (slot: string) => (slot === 'snack' ? snackCalories : mainCalories);
 
   const proteinPerMeal = macros.proteinGrams / mealSlots.length;
   const fatPerMeal = macros.fatGrams / mealSlots.length;
@@ -218,7 +259,7 @@ export function generateMealPlan(
     const template = templates[0];
 
     const isSnack = slot === 'snack';
-    const cal = calPerMeal[slot] || mainCalories;
+    const cal = calPerSlot(slot);
     const prot = isSnack ? proteinPerMeal * 0.6 : proteinPerMeal * 1.1;
     const fat = isSnack ? fatPerMeal * 0.6 : fatPerMeal * 1.1;
     const carbs = isSnack ? carbsPerMeal * 0.5 : carbsPerMeal * 1.1;

@@ -43,16 +43,16 @@ export default function CalculatorPage() {
 
   function handleStep3(screening: HealthScreening) {
     const profile: UserProfile = {
-      age: (step1Data as UserProfile).age,
-      sex: (step1Data as UserProfile).sex,
-      heightCm: (step1Data as UserProfile).heightCm,
-      weightKg: (step1Data as UserProfile).weightKg,
-      goalWeightKg: (step1Data as UserProfile).goalWeightKg,
-      goal: (step1Data as UserProfile).goal,
-      activityLevel: (step2Data as UserProfile).activityLevel,
-      trainingType: (step2Data as UserProfile).trainingType,
-      mealsPerDay: (step2Data as UserProfile).mealsPerDay,
-      foodPreferences: (step2Data as UserProfile).foodPreferences,
+      age: step1Data.age!,
+      sex: step1Data.sex!,
+      heightCm: step1Data.heightCm!,
+      weightKg: step1Data.weightKg!,
+      goalWeightKg: step1Data.goalWeightKg,
+      goal: step1Data.goal!,
+      activityLevel: step2Data.activityLevel ?? 'sedentary',
+      trainingType: step2Data.trainingType ?? 'none',
+      mealsPerDay: step2Data.mealsPerDay ?? 3,
+      foodPreferences: step2Data.foodPreferences ?? ['omnivore'],
     };
 
     setProfile(profile);
