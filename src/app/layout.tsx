@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { AppProvider } from '@/lib/context';
+import AuthProvider from '@/components/AuthProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="ka" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-gray-50 font-[var(--font-geist-sans)]">
-        <AppProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </AppProvider>
+        <AuthProvider>
+          <AppProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </AppProvider>
+        </AuthProvider>
       </body>
     </html>
   );
