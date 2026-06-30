@@ -19,6 +19,7 @@ interface SubInfo {
   calculationsUsed: number;
   canCalculate: boolean;
   limit: number;
+  authConfigured?: boolean;
 }
 
 export default function CalculatorPage() {
@@ -31,10 +32,13 @@ export default function CalculatorPage() {
   const { data: session, status: authStatus } = useSession();
   const router = useRouter();
 
+  const authConfigured = subInfo?.authConfigured ?? false;
+
   useEffect(() => {
     fetch('/api/subscription')
       .then((r) => r.json())
-      .then(setSubInfo);
+      .then(setSubInfo)
+      .catch(() => setSubInfo({ status: 'unconfigured', calculationsUsed: 0, canCalculate: true, limit: 3, authConfigured: false }));
   }, []);
 
   function handleStep1(data: {
@@ -60,17 +64,19 @@ export default function CalculatorPage() {
   }
 
   async function handleStep3(screening: HealthScreening) {
-    if (!session) {
-      signIn('google', { callbackUrl: '/calculator' });
-      return;
-    }
-
-    const res = await fetch('/api/subscription', { method: 'POST' });
-    if (!res.ok) {
-      const data = await res.json();
-      if (data.requiresSubscription) {
-        setBlocked(true);
+    if (authConfigured) {
+      if (!session) {
+        signIn('google', { callbackUrl: '/calculator' });
         return;
+      }
+
+      const res = await fetch('/api/subscription', { method: 'POST' });
+      if (!res.ok) {
+        const data = await res.json();
+        if (data.requiresSubscription) {
+          setBlocked(true);
+          return;
+        }
       }
     }
 
@@ -129,7 +135,7 @@ export default function CalculatorPage() {
 
   return (
     <div className="max-w-lg mx-auto px-4 py-8">
-      {subInfo && subInfo.status !== 'active' && authStatus !== 'loading' && (
+      {authConfigured && subInfo && subInfo.status !== 'active' && authStatus !== 'loading' && (
         <div className="mb-4 flex items-center justify-between bg-white rounded-lg border border-gray-200 px-4 py-2.5 text-sm">
           <span className="text-gray-500">
             უფასო გამოთვლები: <span className="font-medium text-gray-900">{subInfo.calculationsUsed}/{subInfo.limit}</span>
