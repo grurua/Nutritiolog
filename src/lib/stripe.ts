@@ -1,18 +1,28 @@
 import Stripe from 'stripe';
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+let _stripe: Stripe | null = null;
+
+export function getStripe(): Stripe {
+  if (!_stripe) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error('STRIPE_SECRET_KEY is not set');
+    }
+    _stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  }
+  return _stripe;
+}
 
 export const PLANS = {
   monthly: {
     name: 'თვიური',
     price: '₾9.99',
-    priceId: process.env.STRIPE_MONTHLY_PRICE_ID!,
+    priceId: process.env.STRIPE_MONTHLY_PRICE_ID || '',
     interval: 'month' as const,
   },
   yearly: {
     name: 'წლიური',
     price: '₾79.99',
-    priceId: process.env.STRIPE_YEARLY_PRICE_ID!,
+    priceId: process.env.STRIPE_YEARLY_PRICE_ID || '',
     interval: 'year' as const,
     savings: '33%',
   },

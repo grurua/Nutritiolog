@@ -1,4 +1,4 @@
-import { stripe, FREE_CALCULATION_LIMIT } from './stripe';
+import { getStripe, FREE_CALCULATION_LIMIT } from './stripe';
 
 export type SubscriptionStatus = 'free' | 'active' | 'canceled' | 'past_due';
 
@@ -35,7 +35,7 @@ export async function getUserSubscription(userId: string): Promise<UserSubscript
 
   if (data.stripeCustomerId) {
     try {
-      const subscriptions = await stripe.subscriptions.list({
+      const subscriptions = await getStripe().subscriptions.list({
         customer: data.stripeCustomerId,
         status: 'all',
         limit: 1,
