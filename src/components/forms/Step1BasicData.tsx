@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { Sex, Goal } from '@/lib/health/types';
-import { AGE_MIN, AGE_MAX, HEIGHT_MIN, HEIGHT_MAX, WEIGHT_MIN, WEIGHT_MAX } from '@/lib/health/healthConstants';
+import { AGE_MIN, HEIGHT_MIN, HEIGHT_MAX, WEIGHT_MIN, WEIGHT_MAX } from '@/lib/health/healthConstants';
 
 interface Step1Data {
   age: number;

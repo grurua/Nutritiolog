@@ -126,8 +126,6 @@ function buildMeal(
   targetCarbs: number
 ): Meal {
   const ingredients: MealIngredient[] = [];
-  let remainCal = targetCal;
-  let remainProtein = targetProtein;
   let remainFat = targetFat;
   let remainCarbs = targetCarbs;
 
@@ -142,8 +140,8 @@ function buildMeal(
     const grams = clampPortion(protein.name, idealGrams);
     const ing = createIngredient(protein, grams);
     ingredients.push(ing);
-    remainCal -= ing.calories;
-    remainProtein -= ing.protein;
+
+
     remainFat -= ing.fat;
     remainCarbs -= ing.carbs;
   }
@@ -155,8 +153,8 @@ function buildMeal(
       const grams = clampPortion(carb.name, idealGrams);
       const ing = createIngredient(carb, grams);
       ingredients.push(ing);
-      remainCal -= ing.calories;
-      remainProtein -= ing.protein;
+  
+  
       remainFat -= ing.fat;
       remainCarbs -= ing.carbs;
     }
@@ -167,8 +165,7 @@ function buildMeal(
     const grams = clampPortion(veg.name, 150);
     const ing = createIngredient(veg, grams);
     ingredients.push(ing);
-    remainCal -= ing.calories;
-    remainProtein -= ing.protein;
+
     remainFat -= ing.fat;
   }
 
@@ -179,7 +176,6 @@ function buildMeal(
       const grams = clampPortion(fat.name, idealGrams);
       const ing = createIngredient(fat, grams);
       ingredients.push(ing);
-      remainCal -= ing.calories;
     }
   }
 
