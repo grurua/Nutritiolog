@@ -22,6 +22,45 @@ function SugarBar({ sugar, max }: { sugar: number; max: number }) {
   );
 }
 
+const SVG_FALLBACKS: Record<string, string> = {
+  'redbull': '/products/redbull.svg',
+  'coca-cola': '/products/coca-cola.svg',
+  'coca-cola-zero': '/products/coca-cola-zero.svg',
+  'fanta': '/products/fanta.svg',
+  'sprite': '/products/sprite.svg',
+  'pepsi': '/products/pepsi.svg',
+  'limonati-tarhun': '/products/limonati-tarhun.svg',
+  'limonati-feijoa': '/products/limonati-feijoa.svg',
+  'borjomi': '/products/borjomi.svg',
+  'nabeghlavi': '/products/nabeghlavi.svg',
+  'monster': '/products/monster.svg',
+  'beer-argo': '/products/beer.svg',
+  'beer-natakhtari': '/products/beer.svg',
+  'beer-heineken': '/products/heineken.svg',
+  'wine-red': '/products/wine-red.svg',
+  'wine-white': '/products/wine-white.svg',
+  'chacha': '/products/spirits.svg',
+  'vodka': '/products/spirits.svg',
+  'whiskey': '/products/spirits.svg',
+  'lays-classic': '/products/lays.svg',
+  'doritos': '/products/doritos.svg',
+  'snickers': '/products/snickers.svg',
+  'kitkat': '/products/kitkat.svg',
+  'churchkhela': '/products/churchkhela.svg',
+  'tklapi': '/products/tklapi.svg',
+  'pringles': '/products/pringles.svg',
+  'dark-chocolate-85': '/products/dark-chocolate.svg',
+  'rice-cakes': '/products/rice-cakes.svg',
+  'walnut': '/products/walnut.svg',
+  'almond': '/products/almond.svg',
+  'hazelnut': '/products/hazelnut.svg',
+  'pistachio': '/products/pistachio.svg',
+  'cashew': '/products/cashew.svg',
+  'peanut': '/products/peanut.svg',
+  'sunflower-seeds': '/products/sunflower-seeds.svg',
+  'pumpkin-seeds': '/products/pumpkin-seeds.svg',
+};
+
 function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -35,8 +74,8 @@ function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number
           alt={product.name}
           className="h-24 max-w-[85%] object-contain"
           onError={(e) => {
-            const fallback = `/products/${product.id.replace(/-.+$/, '')}.svg`;
-            if (e.currentTarget.src !== fallback) {
+            const fallback = SVG_FALLBACKS[product.id];
+            if (fallback && !e.currentTarget.src.endsWith('.svg')) {
               e.currentTarget.src = fallback;
             }
           }}
