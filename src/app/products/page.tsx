@@ -24,6 +24,7 @@ function SugarBar({ sugar, max }: { sugar: number; max: number }) {
 
 const SVG_FALLBACKS: Record<string, string> = {
   'redbull': '/products/redbull.svg',
+  'redbull-sugarfree': '/products/redbull.svg',
   'coca-cola': '/products/coca-cola.svg',
   'coca-cola-zero': '/products/coca-cola-zero.svg',
   'fanta': '/products/fanta.svg',
