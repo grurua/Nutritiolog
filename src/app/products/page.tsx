@@ -29,16 +29,18 @@ function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number
     <div
       className={`bg-white rounded-xl border ${product.isHealthy ? 'border-emerald-200' : 'border-gray-200'} overflow-hidden transition-shadow hover:shadow-md`}
     >
-      <div className={`h-24 bg-gradient-to-br ${product.bgColor} flex items-center justify-center relative`}>
-        <span className="text-5xl drop-shadow-lg" role="img" aria-label={product.name}>
-          {product.emoji}
-        </span>
+      <div className="h-28 bg-white flex items-center justify-center relative border-b border-gray-100">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="h-20 w-auto object-contain"
+        />
         {product.isHealthy && (
-          <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-white/90 text-emerald-700 text-[10px] font-bold rounded-full backdrop-blur-sm">
+          <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full border border-emerald-200">
             ჯანსაღი
           </span>
         )}
-        <div className="absolute bottom-2 right-2 bg-black/40 backdrop-blur-sm rounded-lg px-2 py-0.5">
+        <div className="absolute bottom-2 right-2 bg-gray-900/80 backdrop-blur-sm rounded-lg px-2 py-0.5">
           <span className="text-white text-xs font-bold">{product.calories} კკალ</span>
         </div>
       </div>

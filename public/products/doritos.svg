@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140" fill="none">
+  <!-- Bag shape -->
+  <path d="M20 20 Q15 10 25 5 L75 5 Q85 10 80 20 L85 120 Q85 135 70 135 L30 135 Q15 135 15 120 Z" fill="#1e1b4b"/>
+  <path d="M20 20 Q15 10 25 5 L75 5 Q85 10 80 20 L85 120 Q85 135 70 135 L30 135 Q15 135 15 120 Z" fill="url(#dr-g)" opacity="0.2"/>
+  <!-- Crimped top -->
+  <path d="M25 5 L30 12 L35 5 L40 12 L45 5 L50 12 L55 5 L60 12 L65 5 L70 12 L75 5" stroke="#312e81" stroke-width="1.5" fill="none"/>
+  <!-- Triangle chip -->
+  <polygon points="50,35 25,85 75,85" fill="#f59e0b" opacity="0.9"/>
+  <polygon points="50,40 30,80 70,80" fill="#d97706" opacity="0.4"/>
+  <!-- Brand -->
+  <text x="50" y="105" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="bold" font-family="Arial, sans-serif">DORITOS</text>
+  <!-- Flavor text -->
+  <text x="50" y="118" text-anchor="middle" fill="#fbbf24" font-size="5" font-family="Arial, sans-serif">NACHO CHEESE</text>
+  <defs>
+    <linearGradient id="dr-g" x1="15" y1="0" x2="85" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+</svg>

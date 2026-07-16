@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 240" fill="none">
+  <!-- String -->
+  <line x1="50" y1="5" x2="50" y2="30" stroke="#78716c" stroke-width="2"/>
+  <!-- Loop -->
+  <path d="M45 5 Q50 0 55 5" stroke="#78716c" stroke-width="1.5" fill="none"/>
+  <!-- Churchkhela body -->
+  <path d="M42 30 Q38 60 37 100 Q36 140 38 180 Q40 210 50 220 Q60 210 62 180 Q64 140 63 100 Q62 60 58 30 Z" fill="#5b2c0e"/>
+  <path d="M42 30 Q38 60 37 100 Q36 140 38 180 Q40 210 50 220 Q60 210 62 180 Q64 140 63 100 Q62 60 58 30 Z" fill="url(#ch-g)" opacity="0.4"/>
+  <!-- Walnut bumps -->
+  <ellipse cx="47" cy="55" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <ellipse cx="53" cy="80" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <ellipse cx="47" cy="105" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <ellipse cx="53" cy="130" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <ellipse cx="47" cy="155" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <ellipse cx="53" cy="180" rx="6" ry="5" fill="#7c3f10" opacity="0.6"/>
+  <!-- Texture lines -->
+  <path d="M43 45 Q50 42 57 45" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <path d="M42 70 Q50 67 58 70" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <path d="M42 95 Q50 92 58 95" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <path d="M42 120 Q50 117 58 120" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <path d="M42 145 Q50 142 58 145" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <path d="M42 170 Q50 167 58 170" stroke="#4a2008" stroke-width="0.5" opacity="0.4"/>
+  <defs>
+    <linearGradient id="ch-g" x1="37" y1="0" x2="63" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>

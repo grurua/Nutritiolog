@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 80" fill="none">
+  <!-- Bar shape -->
+  <rect x="10" y="15" width="120" height="50" rx="8" fill="#5b3a1a"/>
+  <!-- Chocolate coating -->
+  <rect x="10" y="15" width="120" height="50" rx="8" fill="url(#sn-g)" opacity="0.4"/>
+  <!-- Caramel drizzle -->
+  <path d="M20 35 Q40 30 60 35 Q80 40 100 35 Q115 32 125 35" stroke="#d97706" stroke-width="3" fill="none" opacity="0.7"/>
+  <!-- Peanut bumps -->
+  <ellipse cx="35" cy="42" rx="5" ry="3" fill="#92400e" opacity="0.5"/>
+  <ellipse cx="55" cy="38" rx="4" ry="3" fill="#92400e" opacity="0.5"/>
+  <ellipse cx="75" cy="42" rx="5" ry="3" fill="#92400e" opacity="0.5"/>
+  <ellipse cx="95" cy="38" rx="4" ry="3" fill="#92400e" opacity="0.5"/>
+  <!-- Label area -->
+  <rect x="25" y="22" width="90" height="36" rx="3" fill="#1e40af" opacity="0.85"/>
+  <!-- Brand text -->
+  <text x="70" y="46" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="Arial, sans-serif" letter-spacing="1">SNICKERS</text>
+  <defs>
+    <linearGradient id="sn-g" x1="10" y1="15" x2="10" y2="65">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>
