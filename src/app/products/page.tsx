@@ -29,22 +29,24 @@ function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number
     <div
       className={`bg-white rounded-xl border ${product.isHealthy ? 'border-emerald-200' : 'border-gray-200'} overflow-hidden transition-shadow hover:shadow-md`}
     >
+      <div className={`h-24 bg-gradient-to-br ${product.bgColor} flex items-center justify-center relative`}>
+        <span className="text-5xl drop-shadow-lg" role="img" aria-label={product.name}>
+          {product.emoji}
+        </span>
+        {product.isHealthy && (
+          <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-white/90 text-emerald-700 text-[10px] font-bold rounded-full backdrop-blur-sm">
+            ჯანსაღი
+          </span>
+        )}
+        <div className="absolute bottom-2 right-2 bg-black/40 backdrop-blur-sm rounded-lg px-2 py-0.5">
+          <span className="text-white text-xs font-bold">{product.calories} კკალ</span>
+        </div>
+      </div>
       <div className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <h3 className="text-sm font-semibold text-gray-900 truncate">{product.name}</h3>
-              {product.isHealthy && (
-                <span className="flex-shrink-0 px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-medium rounded-full">
-                  ჯანსაღი
-                </span>
-              )}
-            </div>
+            <h3 className="text-sm font-semibold text-gray-900 truncate">{product.name}</h3>
             <p className="text-xs text-gray-400">{product.servingSize}</p>
-          </div>
-          <div className="text-right flex-shrink-0 ml-3">
-            <p className="text-lg font-bold text-gray-900">{product.calories}</p>
-            <p className="text-[10px] text-gray-400">კკალ</p>
           </div>
         </div>
 
