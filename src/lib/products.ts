@@ -13,6 +13,8 @@ export interface Product {
   ingredients: string[];
   isHealthy: boolean;
   healthNote?: string;
+  emoji: string;
+  bgColor: string;
 }
 
 export const CATEGORIES = {
@@ -41,6 +43,8 @@ export const products: Product[] = [
     carbs: 28,
     ingredients: ['წყალი', 'შაქარი', 'გლუკოზა', 'ტაურინი', 'გლუკურონოლაქტონი', 'კოფეინი', 'B ჯგუფის ვიტამინები', 'არომატიზატორები'],
     isHealthy: false,
+    emoji: '⚡',
+    bgColor: 'from-blue-500 to-indigo-600',
   },
   {
     id: 'coca-cola',
@@ -55,6 +59,8 @@ export const products: Product[] = [
     carbs: 35,
     ingredients: ['წყალი', 'შაქარი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'ნატურალური არომატიზატორები', 'კოფეინი'],
     isHealthy: false,
+    emoji: '🥤',
+    bgColor: 'from-red-500 to-red-700',
   },
   {
     id: 'fanta',
@@ -69,6 +75,8 @@ export const products: Product[] = [
     carbs: 39,
     ingredients: ['წყალი', 'შაქარი', 'ფორთოხლის წვენი 3%', 'ლიმონმჟავა', 'ნატურალური არომატიზატორები', 'ბეტა-კაროტინი'],
     isHealthy: false,
+    emoji: '🍊',
+    bgColor: 'from-orange-400 to-orange-600',
   },
   {
     id: 'sprite',
@@ -83,6 +91,8 @@ export const products: Product[] = [
     carbs: 32,
     ingredients: ['წყალი', 'შაქარი', 'ლიმონმჟავა', 'ნატურალური არომატიზატორები'],
     isHealthy: false,
+    emoji: '🍋',
+    bgColor: 'from-green-400 to-emerald-500',
   },
   {
     id: 'pepsi',
@@ -97,6 +107,8 @@ export const products: Product[] = [
     carbs: 36,
     ingredients: ['წყალი', 'შაქარი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'კოფეინი', 'ნატურალური არომატიზატორები'],
     isHealthy: false,
+    emoji: '🥤',
+    bgColor: 'from-blue-600 to-blue-800',
   },
   {
     id: 'limonati-tarhun',
@@ -111,6 +123,8 @@ export const products: Product[] = [
     carbs: 53,
     ingredients: ['წყალი', 'შაქარი', 'ტარხუნის ექსტრაქტი', 'ლიმონმჟავა', 'საღებავი', 'არომატიზატორი'],
     isHealthy: false,
+    emoji: '🌿',
+    bgColor: 'from-emerald-500 to-green-700',
   },
   {
     id: 'limonati-feijoa',
@@ -125,6 +139,8 @@ export const products: Product[] = [
     carbs: 50,
     ingredients: ['წყალი', 'შაქარი', 'ფეიხოას ექსტრაქტი', 'ლიმონმჟავა', 'არომატიზატორი'],
     isHealthy: false,
+    emoji: '🍈',
+    bgColor: 'from-lime-400 to-green-600',
   },
   {
     id: 'coca-cola-zero',
@@ -140,6 +156,8 @@ export const products: Product[] = [
     ingredients: ['წყალი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'დამატკბობლები (ასპარტამი, აცესულფამი K)', 'კოფეინი'],
     isHealthy: true,
     healthNote: 'არ შეიცავს შაქარს. ხელოვნური დამატკბობლები გამოიყენება. ზომიერად მიღება მისაღებია.',
+    emoji: '🖤',
+    bgColor: 'from-gray-800 to-black',
   },
   {
     id: 'borjomi',
@@ -155,6 +173,8 @@ export const products: Product[] = [
     ingredients: ['ნატურალური მინერალური წყალი', 'ნახშირორჟანგი'],
     isHealthy: true,
     healthNote: 'ნატურალური მინერალური წყალი. მინერალებით მდიდარი. ყოველდღიური მიღება რეკომენდირებულია.',
+    emoji: '💧',
+    bgColor: 'from-cyan-400 to-blue-500',
   },
   {
     id: 'nabeghlavi',
@@ -170,6 +190,8 @@ export const products: Product[] = [
     ingredients: ['ნატურალური მინერალური წყალი', 'ნახშირორჟანგი'],
     isHealthy: true,
     healthNote: 'ნატურალური მინერალური წყალი. ბიკარბონატებითა და მინერალებით მდიდარი.',
+    emoji: '🏔️',
+    bgColor: 'from-sky-400 to-cyan-600',
   },
   {
     id: 'monster',
@@ -184,6 +206,8 @@ export const products: Product[] = [
     carbs: 56,
     ingredients: ['წყალი', 'შაქარი', 'გლუკოზა', 'ლიმონმჟავა', 'ტაურინი', 'კოფეინი', 'B ვიტამინები', 'გუარანა', 'ჟინსენგი'],
     isHealthy: false,
+    emoji: '👹',
+    bgColor: 'from-green-500 to-black',
   },
 
   // === ალკოჰოლური სასმელები ===
@@ -200,6 +224,8 @@ export const products: Product[] = [
     carbs: 17,
     ingredients: ['წყალი', 'ალაო', 'სვია', 'საფუარი'],
     isHealthy: false,
+    emoji: '🍺',
+    bgColor: 'from-amber-400 to-amber-600',
   },
   {
     id: 'beer-natakhtari',
@@ -214,6 +240,8 @@ export const products: Product[] = [
     carbs: 16,
     ingredients: ['წყალი', 'ალაო', 'სვია', 'საფუარი'],
     isHealthy: false,
+    emoji: '🍺',
+    bgColor: 'from-yellow-500 to-amber-600',
   },
   {
     id: 'wine-red',
@@ -229,6 +257,8 @@ export const products: Product[] = [
     ingredients: ['ყურძნის წვენი', 'საფუარი', 'სულფიტები'],
     isHealthy: false,
     healthNote: 'ზომიერად მიღებისას შეიცავს ანტიოქსიდანტებს, მაგრამ ალკოჰოლის მავნე ეფექტი აჭარბებს.',
+    emoji: '🍷',
+    bgColor: 'from-red-700 to-red-900',
   },
   {
     id: 'wine-white',
@@ -243,6 +273,8 @@ export const products: Product[] = [
     carbs: 3.8,
     ingredients: ['ყურძნის წვენი', 'საფუარი', 'სულფიტები'],
     isHealthy: false,
+    emoji: '🥂',
+    bgColor: 'from-yellow-300 to-amber-400',
   },
   {
     id: 'chacha',
@@ -257,6 +289,8 @@ export const products: Product[] = [
     carbs: 0,
     ingredients: ['ყურძნის ნაჭაჭი', 'სპირტი'],
     isHealthy: false,
+    emoji: '🔥',
+    bgColor: 'from-stone-500 to-stone-700',
   },
   {
     id: 'vodka',
@@ -271,6 +305,8 @@ export const products: Product[] = [
     carbs: 0,
     ingredients: ['სპირტი', 'წყალი'],
     isHealthy: false,
+    emoji: '🧊',
+    bgColor: 'from-slate-400 to-slate-600',
   },
   {
     id: 'whiskey',
@@ -285,6 +321,8 @@ export const products: Product[] = [
     carbs: 0,
     ingredients: ['ალაოს სპირტი', 'წყალი'],
     isHealthy: false,
+    emoji: '🥃',
+    bgColor: 'from-amber-600 to-amber-800',
   },
   {
     id: 'beer-heineken',
@@ -299,6 +337,8 @@ export const products: Product[] = [
     carbs: 11,
     ingredients: ['წყალი', 'ალაო', 'სვია', 'საფუარი'],
     isHealthy: false,
+    emoji: '🍻',
+    bgColor: 'from-green-500 to-green-700',
   },
 
   // === სნექები ===
@@ -315,6 +355,8 @@ export const products: Product[] = [
     carbs: 53,
     ingredients: ['კარტოფილი', 'მცენარეული ზეთი', 'მარილი'],
     isHealthy: false,
+    emoji: '🥔',
+    bgColor: 'from-yellow-400 to-yellow-600',
   },
   {
     id: 'doritos',
@@ -329,6 +371,8 @@ export const products: Product[] = [
     carbs: 60,
     ingredients: ['სიმინდის ფქვილი', 'მცენარეული ზეთი', 'სანელებლები', 'მარილი', 'ყველის ფხვნილი'],
     isHealthy: false,
+    emoji: '🔺',
+    bgColor: 'from-red-500 to-orange-600',
   },
   {
     id: 'snickers',
@@ -343,6 +387,8 @@ export const products: Product[] = [
     carbs: 32,
     ingredients: ['შაქარი', 'თხილი', 'რძის შოკოლადი', 'გლუკოზის სიროფი', 'რძის ფხვნილი', 'კაკაოს კარაქი'],
     isHealthy: false,
+    emoji: '🍫',
+    bgColor: 'from-amber-700 to-amber-900',
   },
   {
     id: 'kitkat',
@@ -357,6 +403,8 @@ export const products: Product[] = [
     carbs: 26,
     ingredients: ['შაქარი', 'ფქვილი', 'კაკაოს კარაქი', 'რძის ფხვნილი', 'მცენარეული ცხიმი'],
     isHealthy: false,
+    emoji: '🍫',
+    bgColor: 'from-red-600 to-red-800',
   },
   {
     id: 'churchkhela',
@@ -372,6 +420,8 @@ export const products: Product[] = [
     ingredients: ['ყურძნის წვენი', 'ფქვილი', 'ნიგოზი'],
     isHealthy: false,
     healthNote: 'ქართული ტრადიციული საკვები. შეიცავს ბუნებრივ შაქარს და ნიგოზის სასარგებლო ცხიმებს, მაგრამ კალორიულობა მაღალია.',
+    emoji: '🇬🇪',
+    bgColor: 'from-purple-600 to-purple-800',
   },
   {
     id: 'tklapi',
@@ -387,6 +437,8 @@ export const products: Product[] = [
     ingredients: ['ქლიავის ან ყურძნის პიურე'],
     isHealthy: false,
     healthNote: 'ბუნებრივი ხილის ფურცელი. შეიცავს მხოლოდ ბუნებრივ შაქარს, მაგრამ კონცენტრირებული სახით.',
+    emoji: '🍇',
+    bgColor: 'from-rose-500 to-rose-700',
   },
   {
     id: 'pringles',
@@ -401,6 +453,8 @@ export const products: Product[] = [
     carbs: 55,
     ingredients: ['კარტოფილის ფხვნილი', 'მცენარეული ზეთი', 'სიმინდის სახამებელი', 'ფქვილი', 'მარილი'],
     isHealthy: false,
+    emoji: '🥫',
+    bgColor: 'from-red-500 to-yellow-500',
   },
   {
     id: 'dark-chocolate-85',
@@ -416,6 +470,8 @@ export const products: Product[] = [
     ingredients: ['კაკაოს მასა', 'კაკაოს კარაქი', 'შაქარი'],
     isHealthy: true,
     healthNote: 'მცირე ულუფით მიღებისას შავი შოკოლადი ანტიოქსიდანტებითაა მდიდარი. 25 გ-ის ულუფა ნორმალურია.',
+    emoji: '🍫',
+    bgColor: 'from-stone-700 to-stone-900',
   },
   {
     id: 'rice-cakes',
@@ -431,6 +487,8 @@ export const products: Product[] = [
     ingredients: ['ბრინჯი', 'მარილი'],
     isHealthy: true,
     healthNote: 'დაბალკალორიული სნექი. შეიცავს მინიმალურ ცხიმსა და შაქარს.',
+    emoji: '🍘',
+    bgColor: 'from-amber-200 to-amber-400',
   },
 
   // === თხილეული ===
@@ -448,6 +506,8 @@ export const products: Product[] = [
     ingredients: ['ნიგოზი'],
     isHealthy: true,
     healthNote: 'ომეგა-3 ცხიმოვანი მჟავებით მდიდარი. 30 გ (მუჭა) დღიური ნორმაა.',
+    emoji: '🧠',
+    bgColor: 'from-amber-600 to-amber-800',
   },
   {
     id: 'almond',
@@ -463,6 +523,8 @@ export const products: Product[] = [
     ingredients: ['ნუში'],
     isHealthy: true,
     healthNote: 'ვიტამინ E-ით და მაგნიუმით მდიდარი. კარგი ცილის წყარო. 30 გ (23 ნუში) ოპტიმალურია.',
+    emoji: '🌰',
+    bgColor: 'from-orange-300 to-orange-500',
   },
   {
     id: 'hazelnut',
@@ -478,6 +540,8 @@ export const products: Product[] = [
     ingredients: ['თხილი'],
     isHealthy: true,
     healthNote: 'კარგი ცხიმებით და მანგანუმით მდიდარი. სრულყოფილი სნექი ენერგიის მოსამატებლად.',
+    emoji: '🌰',
+    bgColor: 'from-yellow-700 to-amber-800',
   },
   {
     id: 'pistachio',
@@ -493,6 +557,8 @@ export const products: Product[] = [
     ingredients: ['ფისტა'],
     isHealthy: true,
     healthNote: 'ყველაზე დაბალკალორიული თხილეულიდან. B6 ვიტამინით მდიდარი.',
+    emoji: '💚',
+    bgColor: 'from-green-400 to-green-600',
   },
   {
     id: 'cashew',
@@ -508,6 +574,8 @@ export const products: Product[] = [
     ingredients: ['კეშიუ'],
     isHealthy: true,
     healthNote: 'რკინით, თუთიითა და მაგნიუმით მდიდარი. კარგი არჩევანია ვეგეტარიანელებისთვის.',
+    emoji: '🥜',
+    bgColor: 'from-yellow-400 to-orange-400',
   },
   {
     id: 'peanut',
@@ -523,6 +591,8 @@ export const products: Product[] = [
     ingredients: ['არაქისი'],
     isHealthy: true,
     healthNote: 'ცილით ყველაზე მდიდარი თხილეულიდან. ხელმისაწვდომი და საკვებად ღირებული.',
+    emoji: '🥜',
+    bgColor: 'from-amber-500 to-amber-700',
   },
   {
     id: 'sunflower-seeds',
@@ -538,6 +608,8 @@ export const products: Product[] = [
     ingredients: ['მზესუმზირის თესლი'],
     isHealthy: true,
     healthNote: 'ვიტამინ E-ის ერთ-ერთი საუკეთესო წყარო. სელენიუმით მდიდარი.',
+    emoji: '🌻',
+    bgColor: 'from-yellow-400 to-yellow-600',
   },
   {
     id: 'pumpkin-seeds',
@@ -553,5 +625,7 @@ export const products: Product[] = [
     ingredients: ['გოგრის თესლი'],
     isHealthy: true,
     healthNote: 'მაგნიუმისა და თუთიის შესანიშნავი წყარო. ძალიან მაღალი ცილის შემცველობა.',
+    emoji: '🎃',
+    bgColor: 'from-orange-500 to-orange-700',
   },
 ];
