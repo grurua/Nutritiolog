@@ -64,6 +64,10 @@ const SVG_FALLBACKS: Record<string, string> = {
 function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number }) {
   const [expanded, setExpanded] = useState(false);
 
+  const servingAmount = product.servingG ?? product.servingMl ?? 0;
+  const per100 = servingAmount > 0 ? Math.round(product.calories * 100 / servingAmount) : null;
+  const per100Unit = product.servingMl ? '100 მლ' : '100 გ';
+
   return (
     <div
       className={`bg-white rounded-xl border ${product.isHealthy ? 'border-emerald-200' : 'border-gray-200'} overflow-hidden transition-shadow hover:shadow-md`}
@@ -85,15 +89,25 @@ function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number
             ჯანსაღი
           </span>
         )}
-        <div className="absolute bottom-2 right-2 bg-gray-900/80 backdrop-blur-sm rounded-lg px-2 py-0.5">
-          <span className="text-white text-xs font-bold">{product.calories} კკალ</span>
-        </div>
       </div>
       <div className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1 min-w-0">
             <h3 className="text-sm font-semibold text-gray-900 truncate">{product.name}</h3>
             <p className="text-xs text-gray-400">{product.servingSize}</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          {per100 !== null && (
+            <div className="bg-blue-50 rounded-lg py-2 px-2.5 text-center">
+              <p className="text-sm font-bold text-blue-700">{per100}</p>
+              <p className="text-[10px] text-blue-500">კკალ / {per100Unit}</p>
+            </div>
+          )}
+          <div className={`${per100 !== null ? '' : 'col-span-2 '}bg-orange-50 rounded-lg py-2 px-2.5 text-center`}>
+            <p className="text-sm font-bold text-orange-700">{product.calories}</p>
+            <p className="text-[10px] text-orange-500">კკალ / {product.servingSize}</p>
           </div>
         </div>
 
