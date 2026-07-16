@@ -42,7 +42,7 @@ export const products: Product[] = [
     carbs: 28,
     ingredients: ['წყალი', 'შაქარი', 'გლუკოზა', 'ტაურინი', 'გლუკურონოლაქტონი', 'კოფეინი', 'B ჯგუფის ვიტამინები', 'არომატიზატორები'],
     isHealthy: false,
-    image: '/products/redbull.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Red_Bull%2C_Energy_Drink.jpg/220px-Red_Bull%2C_Energy_Drink.jpg',
   },
   {
     id: 'coca-cola',
@@ -57,7 +57,7 @@ export const products: Product[] = [
     carbs: 35,
     ingredients: ['წყალი', 'შაქარი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'ნატურალური არომატიზატორები', 'კოფეინი'],
     isHealthy: false,
-    image: '/products/coca-cola.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Coca-cola_50cl_white-bg.jpg/150px-Coca-cola_50cl_white-bg.jpg',
   },
   {
     id: 'fanta',
@@ -72,7 +72,7 @@ export const products: Product[] = [
     carbs: 39,
     ingredients: ['წყალი', 'შაქარი', 'ფორთოხლის წვენი 3%', 'ლიმონმჟავა', 'ნატურალური არომატიზატორები', 'ბეტა-კაროტინი'],
     isHealthy: false,
-    image: '/products/fanta.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Fanta_Orange.JPG/200px-Fanta_Orange.JPG',
   },
   {
     id: 'sprite',
@@ -87,7 +87,7 @@ export const products: Product[] = [
     carbs: 32,
     ingredients: ['წყალი', 'შაქარი', 'ლიმონმჟავა', 'ნატურალური არომატიზატორები'],
     isHealthy: false,
-    image: '/products/sprite.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Sprite_cans.jpg/220px-Sprite_cans.jpg',
   },
   {
     id: 'pepsi',
@@ -102,7 +102,7 @@ export const products: Product[] = [
     carbs: 36,
     ingredients: ['წყალი', 'შაქარი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'კოფეინი', 'ნატურალური არომატიზატორები'],
     isHealthy: false,
-    image: '/products/pepsi.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Pepsi_Can.jpg/200px-Pepsi_Can.jpg',
   },
   {
     id: 'limonati-tarhun',
@@ -148,7 +148,7 @@ export const products: Product[] = [
     ingredients: ['წყალი', 'კარამელის საღებავი', 'ფოსფორმჟავა', 'დამატკბობლები (ასპარტამი, აცესულფამი K)', 'კოფეინი'],
     isHealthy: true,
     healthNote: 'არ შეიცავს შაქარს. ხელოვნური დამატკბობლები გამოიყენება. ზომიერად მიღება მისაღებია.',
-    image: '/products/coca-cola-zero.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Coca_Cola_Zero_02.jpg/150px-Coca_Cola_Zero_02.jpg',
   },
   {
     id: 'borjomi',
@@ -164,7 +164,7 @@ export const products: Product[] = [
     ingredients: ['ნატურალური მინერალური წყალი', 'ნახშირორჟანგი'],
     isHealthy: true,
     healthNote: 'ნატურალური მინერალური წყალი. მინერალებით მდიდარი. ყოველდღიური მიღება რეკომენდირებულია.',
-    image: '/products/borjomi.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Borjomi_mineral_water.jpg/200px-Borjomi_mineral_water.jpg',
   },
   {
     id: 'nabeghlavi',
@@ -180,7 +180,7 @@ export const products: Product[] = [
     ingredients: ['ნატურალური მინერალური წყალი', 'ნახშირორჟანგი'],
     isHealthy: true,
     healthNote: 'ნატურალური მინერალური წყალი. ბიკარბონატებითა და მინერალებით მდიდარი.',
-    image: '/products/nabeghlavi.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Nabeghlavi.jpg/200px-Nabeghlavi.jpg',
   },
   {
     id: 'monster',
@@ -195,7 +195,7 @@ export const products: Product[] = [
     carbs: 56,
     ingredients: ['წყალი', 'შაქარი', 'გლუკოზა', 'ლიმონმჟავა', 'ტაურინი', 'კოფეინი', 'B ვიტამინები', 'გუარანა', 'ჟინსენგი'],
     isHealthy: false,
-    image: '/products/monster.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Monster_Energy_drink_%28cropped%29.jpg/200px-Monster_Energy_drink_%28cropped%29.jpg',
   },
 
   // === ალკოჰოლური სასმელები ===
@@ -243,7 +243,7 @@ export const products: Product[] = [
     ingredients: ['ყურძნის წვენი', 'საფუარი', 'სულფიტები'],
     isHealthy: false,
     healthNote: 'ზომიერად მიღებისას შეიცავს ანტიოქსიდანტებს, მაგრამ ალკოჰოლის მავნე ეფექტი აჭარბებს.',
-    image: '/products/wine-red.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Red_Wine_Glas.jpg/150px-Red_Wine_Glas.jpg',
   },
   {
     id: 'wine-white',
@@ -258,7 +258,7 @@ export const products: Product[] = [
     carbs: 3.8,
     ingredients: ['ყურძნის წვენი', 'საფუარი', 'სულფიტები'],
     isHealthy: false,
-    image: '/products/wine-white.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/White_wine_glass.jpg/150px-White_wine_glass.jpg',
   },
   {
     id: 'chacha',
@@ -318,7 +318,7 @@ export const products: Product[] = [
     carbs: 11,
     ingredients: ['წყალი', 'ალაო', 'სვია', 'საფუარი'],
     isHealthy: false,
-    image: '/products/heineken.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heineken_Bottle.jpg/150px-Heineken_Bottle.jpg',
   },
 
   // === სნექები ===
@@ -335,7 +335,7 @@ export const products: Product[] = [
     carbs: 53,
     ingredients: ['კარტოფილი', 'მცენარეული ზეთი', 'მარილი'],
     isHealthy: false,
-    image: '/products/lays.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/A_Lay%27s_Stax_chip.jpg/200px-A_Lay%27s_Stax_chip.jpg',
   },
   {
     id: 'doritos',
@@ -350,7 +350,7 @@ export const products: Product[] = [
     carbs: 60,
     ingredients: ['სიმინდის ფქვილი', 'მცენარეული ზეთი', 'სანელებლები', 'მარილი', 'ყველის ფხვნილი'],
     isHealthy: false,
-    image: '/products/doritos.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Doritos.jpg/220px-Doritos.jpg',
   },
   {
     id: 'snickers',
@@ -365,7 +365,7 @@ export const products: Product[] = [
     carbs: 32,
     ingredients: ['შაქარი', 'თხილი', 'რძის შოკოლადი', 'გლუკოზის სიროფი', 'რძის ფხვნილი', 'კაკაოს კარაქი'],
     isHealthy: false,
-    image: '/products/snickers.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Snickers.jpg/220px-Snickers.jpg',
   },
   {
     id: 'kitkat',
@@ -380,7 +380,7 @@ export const products: Product[] = [
     carbs: 26,
     ingredients: ['შაქარი', 'ფქვილი', 'კაკაოს კარაქი', 'რძის ფხვნილი', 'მცენარეული ცხიმი'],
     isHealthy: false,
-    image: '/products/kitkat.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Kit-Kat-Type-Variations.jpg/220px-Kit-Kat-Type-Variations.jpg',
   },
   {
     id: 'churchkhela',
@@ -396,7 +396,7 @@ export const products: Product[] = [
     ingredients: ['ყურძნის წვენი', 'ფქვილი', 'ნიგოზი'],
     isHealthy: false,
     healthNote: 'ქართული ტრადიციული საკვები. შეიცავს ბუნებრივ შაქარს და ნიგოზის სასარგებლო ცხიმებს, მაგრამ კალორიულობა მაღალია.',
-    image: '/products/churchkhela.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Churchxela.jpg/220px-Churchxela.jpg',
   },
   {
     id: 'tklapi',
@@ -427,7 +427,7 @@ export const products: Product[] = [
     carbs: 55,
     ingredients: ['კარტოფილის ფხვნილი', 'მცენარეული ზეთი', 'სიმინდის სახამებელი', 'ფქვილი', 'მარილი'],
     isHealthy: false,
-    image: '/products/pringles.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pringles_Chip.jpg/200px-Pringles_Chip.jpg',
   },
   {
     id: 'dark-chocolate-85',
@@ -443,7 +443,7 @@ export const products: Product[] = [
     ingredients: ['კაკაოს მასა', 'კაკაოს კარაქი', 'შაქარი'],
     isHealthy: true,
     healthNote: 'მცირე ულუფით მიღებისას შავი შოკოლადი ანტიოქსიდანტებითაა მდიდარი. 25 გ-ის ულუფა ნორმალურია.',
-    image: '/products/dark-chocolate.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Dark_chocolate_bar.jpg/220px-Dark_chocolate_bar.jpg',
   },
   {
     id: 'rice-cakes',
@@ -459,7 +459,7 @@ export const products: Product[] = [
     ingredients: ['ბრინჯი', 'მარილი'],
     isHealthy: true,
     healthNote: 'დაბალკალორიული სნექი. შეიცავს მინიმალურ ცხიმსა და შაქარს.',
-    image: '/products/rice-cakes.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Rice_cake.jpg/220px-Rice_cake.jpg',
   },
 
   // === თხილეული ===
@@ -477,7 +477,7 @@ export const products: Product[] = [
     ingredients: ['ნიგოზი'],
     isHealthy: true,
     healthNote: 'ომეგა-3 ცხიმოვანი მჟავებით მდიდარი. 30 გ (მუჭა) დღიური ნორმაა.',
-    image: '/products/walnut.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Walnut.JPG/220px-Walnut.JPG',
   },
   {
     id: 'almond',
@@ -493,7 +493,7 @@ export const products: Product[] = [
     ingredients: ['ნუში'],
     isHealthy: true,
     healthNote: 'ვიტამინ E-ით და მაგნიუმით მდიდარი. კარგი ცილის წყარო. 30 გ (23 ნუში) ოპტიმალურია.',
-    image: '/products/almond.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Almonds.jpg/220px-Almonds.jpg',
   },
   {
     id: 'hazelnut',
@@ -509,7 +509,7 @@ export const products: Product[] = [
     ingredients: ['თხილი'],
     isHealthy: true,
     healthNote: 'კარგი ცხიმებით და მანგანუმით მდიდარი. სრულყოფილი სნექი ენერგიის მოსამატებლად.',
-    image: '/products/hazelnut.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hazelnuts.jpg/220px-Hazelnuts.jpg',
   },
   {
     id: 'pistachio',
@@ -525,7 +525,7 @@ export const products: Product[] = [
     ingredients: ['ფისტა'],
     isHealthy: true,
     healthNote: 'ყველაზე დაბალკალორიული თხილეულიდან. B6 ვიტამინით მდიდარი.',
-    image: '/products/pistachio.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Pistachios_%28Roasted_and_Salted%29.jpg/220px-Pistachios_%28Roasted_and_Salted%29.jpg',
   },
   {
     id: 'cashew',
@@ -541,7 +541,7 @@ export const products: Product[] = [
     ingredients: ['კეშიუ'],
     isHealthy: true,
     healthNote: 'რკინით, თუთიითა და მაგნიუმით მდიდარი. კარგი არჩევანია ვეგეტარიანელებისთვის.',
-    image: '/products/cashew.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Cashew_Nut_or_Kasoy.jpg/220px-Cashew_Nut_or_Kasoy.jpg',
   },
   {
     id: 'peanut',
@@ -557,7 +557,7 @@ export const products: Product[] = [
     ingredients: ['არაქისი'],
     isHealthy: true,
     healthNote: 'ცილით ყველაზე მდიდარი თხილეულიდან. ხელმისაწვდომი და საკვებად ღირებული.',
-    image: '/products/peanut.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Peanuts.jpg/220px-Peanuts.jpg',
   },
   {
     id: 'sunflower-seeds',
@@ -573,7 +573,7 @@ export const products: Product[] = [
     ingredients: ['მზესუმზირის თესლი'],
     isHealthy: true,
     healthNote: 'ვიტამინ E-ის ერთ-ერთი საუკეთესო წყარო. სელენიუმით მდიდარი.',
-    image: '/products/sunflower-seeds.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sunflower_seeds.jpg/220px-Sunflower_seeds.jpg',
   },
   {
     id: 'pumpkin-seeds',
@@ -589,6 +589,6 @@ export const products: Product[] = [
     ingredients: ['გოგრის თესლი'],
     isHealthy: true,
     healthNote: 'მაგნიუმისა და თუთიის შესანიშნავი წყარო. ძალიან მაღალი ცილის შემცველობა.',
-    image: '/products/pumpkin-seeds.svg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pumpkin_seeds.jpg/220px-Pumpkin_seeds.jpg',
   },
 ];
