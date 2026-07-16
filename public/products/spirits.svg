@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 220" fill="none">
+  <!-- Shot glass -->
+  <path d="M30 60 L25 160 Q25 170 40 170 L60 170 Q75 170 75 160 L70 60 Z" fill="#e5e7eb" opacity="0.5"/>
+  <path d="M30 60 L25 160 Q25 170 40 170 L60 170 Q75 170 75 160 L70 60 Z" fill="url(#sh-s)" opacity="0.3"/>
+  <!-- Liquid -->
+  <path d="M33 90 L27 155 Q27 165 40 165 L60 165 Q73 165 73 155 L67 90 Z" fill="#fef3c7" opacity="0.4"/>
+  <!-- Glass rim -->
+  <ellipse cx="50" cy="60" rx="22" ry="6" fill="#d1d5db" opacity="0.5"/>
+  <ellipse cx="50" cy="60" rx="20" ry="5" fill="white" opacity="0.3"/>
+  <!-- Base -->
+  <rect x="32" y="168" width="36" height="5" rx="2" fill="#d1d5db"/>
+  <defs>
+    <linearGradient id="sh-s" x1="25" y1="0" x2="75" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+</svg>

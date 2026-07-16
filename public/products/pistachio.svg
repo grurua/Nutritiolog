@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 100" fill="none">
+  <!-- Shell halves (open) -->
+  <path d="M25 50 Q20 30 35 20 Q45 15 50 20 L45 55 Q35 60 25 50 Z" fill="#e8dcc8"/>
+  <path d="M65 50 Q70 30 55 20 Q50 15 48 20 L50 55 Q60 60 65 50 Z" fill="#d4c8b4"/>
+  <!-- Green nut inside -->
+  <ellipse cx="47" cy="42" rx="10" ry="16" fill="#65a30d"/>
+  <ellipse cx="47" cy="42" rx="10" ry="16" fill="url(#pi-g)" opacity="0.3"/>
+  <!-- Nut highlight -->
+  <ellipse cx="44" cy="36" rx="4" ry="6" fill="white" opacity="0.15"/>
+  <!-- Shell texture -->
+  <path d="M30 35 Q37 30 42 35" stroke="#c4b8a4" stroke-width="0.5" opacity="0.5"/>
+  <path d="M55 35 Q58 30 62 35" stroke="#c4b8a4" stroke-width="0.5" opacity="0.5"/>
+  <defs>
+    <linearGradient id="pi-g" x1="37" y1="26" x2="57" y2="58">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>

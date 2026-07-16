@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 220" fill="none">
+  <!-- Tall can body -->
+  <rect x="15" y="15" width="90" height="190" rx="8" fill="#1a1a1a"/>
+  <rect x="15" y="15" width="90" height="190" rx="8" fill="url(#mn-shine)" opacity="0.2"/>
+  <!-- Green M claw marks -->
+  <path d="M35 60 L40 140 L48 65" stroke="#4ade80" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M48 55 L52 135 L58 58" stroke="#4ade80" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M62 55 L66 135 L72 58" stroke="#4ade80" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M72 60 L78 140 L85 65" stroke="#4ade80" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- MONSTER text -->
+  <text x="60" y="170" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="sans-serif">MONSTER</text>
+  <text x="60" y="182" text-anchor="middle" fill="#4ade80" font-size="7" font-family="sans-serif">ENERGY</text>
+  <!-- Can top -->
+  <ellipse cx="60" cy="17" rx="45" ry="6" fill="#333"/>
+  <ellipse cx="60" cy="17" rx="40" ry="4" fill="#444"/>
+  <rect x="52" y="10" width="16" height="8" rx="4" fill="#555"/>
+  <!-- Can bottom -->
+  <ellipse cx="60" cy="203" rx="45" ry="5" fill="#111"/>
+  <defs>
+    <linearGradient id="mn-shine" x1="15" y1="0" x2="105" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+</svg>

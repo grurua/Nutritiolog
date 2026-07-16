@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 220" fill="none">
+  <path d="M38 15 L38 45 L28 60 L28 200 Q28 210 40 210 L60 210 Q72 210 72 200 L72 60 L62 45 L62 15 Z" fill="#16a34a"/>
+  <path d="M38 15 L38 45 L28 60 L28 200 Q28 210 40 210 L60 210 Q72 210 72 200 L72 60 L62 45 L62 15 Z" fill="url(#lt-s)" opacity="0.3"/>
+  <rect x="30" y="85" width="40" height="55" rx="3" fill="#fef9c3" opacity="0.9"/>
+  <text x="50" y="110" text-anchor="middle" fill="#15803d" font-size="6" font-weight="bold" font-family="serif">ტარხუნა</text>
+  <text x="50" y="125" text-anchor="middle" fill="#15803d" font-size="5" font-family="serif">ლიმონათი</text>
+  <!-- Herb leaves -->
+  <path d="M42 92 Q50 85 58 92" stroke="#15803d" stroke-width="1.5" fill="none"/>
+  <path d="M45 95 Q50 89 55 95" stroke="#15803d" stroke-width="1" fill="none"/>
+  <rect x="36" y="10" width="28" height="8" rx="3" fill="#14532d"/>
+  <ellipse cx="50" cy="10" rx="14" ry="3" fill="#16a34a"/>
+  <defs>
+    <linearGradient id="lt-s" x1="28" y1="0" x2="72" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>

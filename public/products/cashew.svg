@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Cashew curved shape -->
+  <path d="M65 25 Q80 30 75 50 Q70 70 55 80 Q40 88 30 80 Q20 72 25 60 Q30 48 45 40 Q55 35 65 25 Z" fill="#e8c87a"/>
+  <path d="M65 25 Q80 30 75 50 Q70 70 55 80 Q40 88 30 80 Q20 72 25 60 Q30 48 45 40 Q55 35 65 25 Z" fill="url(#cs-g)" opacity="0.3"/>
+  <!-- Ridge lines -->
+  <path d="M60 32 Q70 40 67 55" stroke="#d4b46a" stroke-width="0.8" opacity="0.4"/>
+  <path d="M55 38 Q65 48 60 62" stroke="#d4b46a" stroke-width="0.8" opacity="0.4"/>
+  <path d="M48 45 Q55 55 50 70" stroke="#d4b46a" stroke-width="0.8" opacity="0.4"/>
+  <!-- Highlight -->
+  <path d="M60 30 Q72 38 68 52" stroke="white" stroke-width="1.5" opacity="0.15" fill="none"/>
+  <defs>
+    <linearGradient id="cs-g" x1="20" y1="25" x2="80" y2="88">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>

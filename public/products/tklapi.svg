@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 180" fill="none">
+  <!-- Rolled tklapi (fruit leather) -->
+  <path d="M25 40 Q20 40 20 50 L20 150 Q20 160 30 160 L90 160 Q100 160 100 150 L100 50 Q100 40 90 40 Z" fill="#c2410c" opacity="0.85"/>
+  <!-- Rolled edge -->
+  <path d="M25 40 Q30 35 35 40 L35 160 Q30 165 25 160 Z" fill="#9a3412" opacity="0.7"/>
+  <!-- Surface texture -->
+  <path d="M40 50 L95 50" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <path d="M40 70 L95 70" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <path d="M40 90 L95 90" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <path d="M40 110 L95 110" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <path d="M40 130 L95 130" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <path d="M40 150 L95 150" stroke="#9a3412" stroke-width="0.5" opacity="0.3"/>
+  <!-- Highlight -->
+  <rect x="50" y="45" width="40" height="120" rx="2" fill="white" opacity="0.08"/>
+  <!-- Seed dots -->
+  <circle cx="55" cy="65" r="1.5" fill="#7c2d12" opacity="0.4"/>
+  <circle cx="75" cy="85" r="1" fill="#7c2d12" opacity="0.4"/>
+  <circle cx="65" cy="120" r="1.5" fill="#7c2d12" opacity="0.4"/>
+  <circle cx="80" cy="140" r="1" fill="#7c2d12" opacity="0.4"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 120" fill="none">
+  <!-- Almond shape -->
+  <path d="M40 15 Q65 35 60 70 Q55 100 40 110 Q25 100 20 70 Q15 35 40 15 Z" fill="#d4a574"/>
+  <path d="M40 15 Q65 35 60 70 Q55 100 40 110 Q25 100 20 70 Q15 35 40 15 Z" fill="url(#al-g)" opacity="0.3"/>
+  <!-- Center line -->
+  <path d="M40 20 L40 105" stroke="#b8875a" stroke-width="1" opacity="0.5"/>
+  <!-- Surface texture -->
+  <path d="M30 40 Q40 35 50 40" stroke="#c4956a" stroke-width="0.5" opacity="0.4"/>
+  <path d="M25 60 Q40 55 55 60" stroke="#c4956a" stroke-width="0.5" opacity="0.4"/>
+  <path d="M27 80 Q40 75 53 80" stroke="#c4956a" stroke-width="0.5" opacity="0.4"/>
+  <!-- Highlight -->
+  <path d="M35 25 Q45 40 42 65" stroke="white" stroke-width="1" opacity="0.15" fill="none"/>
+  <defs>
+    <linearGradient id="al-g" x1="15" y1="15" x2="65" y2="110">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+</svg>

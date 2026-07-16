@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 220" fill="none">
+  <!-- Wine glass -->
+  <ellipse cx="50" cy="60" rx="28" ry="15" fill="none" stroke="#881337" stroke-width="2"/>
+  <path d="M22 60 Q22 120 42 130 L42 185 L58 185 L58 130 Q78 120 78 60" fill="#881337" opacity="0.7"/>
+  <path d="M22 60 Q22 85 42 95 L58 95 Q78 85 78 60" fill="#991b1b" opacity="0.9"/>
+  <!-- Wine surface shimmer -->
+  <ellipse cx="50" cy="62" rx="26" ry="8" fill="#dc2626" opacity="0.3"/>
+  <!-- Glass stem -->
+  <rect x="46" y="130" width="8" height="55" fill="#d1d5db"/>
+  <!-- Base -->
+  <ellipse cx="50" cy="190" rx="22" ry="6" fill="#d1d5db"/>
+  <ellipse cx="50" cy="188" rx="20" ry="4" fill="#e5e7eb"/>
+  <!-- Label -->
+  <rect x="33" y="95" width="34" height="20" rx="2" fill="#fef3c7" opacity="0.8"/>
+  <text x="50" y="108" text-anchor="middle" fill="#881337" font-size="5" font-weight="bold" font-family="serif">საფერავი</text>
+</svg>
