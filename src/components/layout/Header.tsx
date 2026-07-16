@@ -39,6 +39,9 @@ export default function Header() {
           <Link href="/pricing" className="hover:text-emerald-600 transition-colors">
             გამოწერა
           </Link>
+          <Link href="/products" className="hover:text-emerald-600 transition-colors">
+            კალორიულობა
+          </Link>
           <Link href="/methodology" className="hover:text-emerald-600 transition-colors">
             მეთოდოლოგია
           </Link>
@@ -90,6 +93,9 @@ export default function Header() {
           </Link>
           <Link href="/pricing" className="block text-gray-600 hover:text-emerald-600" onClick={() => setMenuOpen(false)}>
             გამოწერა
+          </Link>
+          <Link href="/products" className="block text-gray-600 hover:text-emerald-600" onClick={() => setMenuOpen(false)}>
+            კალორიულობა
           </Link>
           <Link href="/methodology" className="block text-gray-600 hover:text-emerald-600" onClick={() => setMenuOpen(false)}>
             მეთოდოლოგია
