@@ -29,11 +29,17 @@ function ProductCard({ product, maxSugar }: { product: Product; maxSugar: number
     <div
       className={`bg-white rounded-xl border ${product.isHealthy ? 'border-emerald-200' : 'border-gray-200'} overflow-hidden transition-shadow hover:shadow-md`}
     >
-      <div className="h-28 bg-white flex items-center justify-center relative border-b border-gray-100">
+      <div className="h-32 bg-white flex items-center justify-center relative border-b border-gray-100 p-2">
         <img
           src={product.image}
           alt={product.name}
-          className="h-20 w-auto object-contain"
+          className="h-24 max-w-[85%] object-contain"
+          onError={(e) => {
+            const fallback = `/products/${product.id.replace(/-.+$/, '')}.svg`;
+            if (e.currentTarget.src !== fallback) {
+              e.currentTarget.src = fallback;
+            }
+          }}
         />
         {product.isHealthy && (
           <span className="absolute top-2 right-2 px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full border border-emerald-200">
